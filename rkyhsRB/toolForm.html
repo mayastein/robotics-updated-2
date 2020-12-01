@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    
+    <!--IMPORT SECTION-->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <!-- import jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <!--STYLE SECTION-->
+    
+    <style>
+      * {
+        margin: 15px;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+      .myForm {
+        display: flex;
+        justify-content: center;
+        height: 0vh;
+        flex-wrap: wrap;
+      }
+      body {
+        font-family: helvetica, arial, sans-serif;
+        margin: 0;
+        padding:0;
+        text-align:center;
+        background-image: url(num3.jpg);
+        background-size: 100%;
+        background-position: center;
+      }
+      .des {
+          background: transparent;
+      }
+      h1{
+        /*margin-top: 100px;*/
+        position:absolute;
+        font-family: sans-serif;
+        font-size: 3em;
+        text-align: center;
+        color: #ddedf1;
+        text-shadow: 0 2px 2px rgba(0, 0, 0.5, 0.5);
+        text-transform: uppercase;
+        transition: all 4s ease-in-out;
+      }
+      /* The sidebar menu */
+      .sidebar {
+          height: 50%; /* 100% Full-height */
+          width: 0; /* 0 width - change this with JavaScript */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Stay on top */
+          top: 0;
+          left: 0;
+          background-color: transparent; /* n/a */
+          overflow-x: hidden; /* Disable horizontal scroll */
+          padding-top: 20px; /* Place content 60px from the top */
+          transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+        }
+
+        /* The sidebar links */
+        .sidebar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidebar a:hover {
+          color: #f1f1f1;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+
+        /* The button used to open the sidebar */
+        .openbtn {
+          font-size: 20px;
+          cursor: pointer;
+          background-color: transparent;
+          color: #ddedf1;
+          padding: 0px 5px;
+          border: none;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+
+        .openbtn:hover {
+          background-color: #444;
+        }
+
+        .b1a {
+          font-size: 20px;
+          cursor: pointer;
+          background-color: #d8f0f0;
+          color: #508a56;
+          padding: 0px 5px;
+          border: none;
+          position: absolute;
+          justify-content: center;
+        }
+
+      form{
+        margin-top: 50px;
+        transition: all 4s ease-in-out;
+      }
+      .form-control{
+        width: 600px;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid gray;
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      form .submit{
+      background: #e99177;
+      border-color: transparent;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      height: 50px;
+      margin-top: 950px;
+    }
+    form .submit:hover{
+      background-color: #f44336;
+      cursor: pointer;
+    }
+      /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+      #main {
+        transition: margin-left .5s; /* If you want a transition effect */
+        padding: 20px;
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+    </style>
+  </head>
+
+
+
+
+
+
+
+
+  <!--NAV BAR-->
+
+
+  <body style = 'overflow-x: hidden;'>
+    <!-- Side navigation -->
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="copied2edit.html">Home</a>
+      <a href="toolbox.php">Toolbox</a>
+      <a href="#">Meeting Signup</a>
+    </div>
+    
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; MENU</button>
+    </div>
+    <script type="text/javascript">
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+          
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--FORM FOR TOOLS-->
+
+
+    <div class = "row justify-content-center">
+      <h1 >Please request your items below:</h1>
+    </div>
+    <form class='myForm' method='post' action='cool.php'>
+      <div class='row justify-content-center w-50' style="margin: auto;">
+        
+        <div class="myForm">
+          
+          <h3 class = "text-center text-white font-weight-light">Item 1</h3>
+          <div class="input-group"></div>
+            <select class="form-control" name="name1">
+              <option>Select item...</option>
+              <option value="1">First</option>
+              <option value="2">Second</option>
+              <option value="3">Third</option>
+            </select>
+            <select class="form-control" name="quant1">
+              <option>Item quantity...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          
+
+          <h3 class = "text-center text-white font-weight-light">Item 2</h3>          
+
+          <select class="form-control" name="name2">
+            <option>Select item...</option>
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+          </select>
+          <select class="form-control" name="quant2">
+            <option>Item quantity...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <h3 class = "text-center text-white font-weight-light">Item 3</h3>          
+
+          <select class="form-control" name="name3">
+            <option>Select item...</option>
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+          </select>
+          <select class="form-control" name="quant3">
+            <option>Item quantity...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <h3 class = "text-center text-white font-weight-light">Item 4</h3>          
+
+          <select class="form-control" name="name4">
+            <option>Select item...</option>
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+          </select>
+          <select class="form-control" name="quant4">
+            <option>Item quantity...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <h3 class = "text-center text-white font-weight-light">Item 5</h3>          
+
+          <select class="form-control" name="name5">
+            <option>Select item...</option>
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+          </select>
+          <select class="form-control" name="quant5">
+            <option>Item quantity...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          </div>
+
+        </div>
+      
+      </div>
+        
+        <!--SUBMIT BUTTON-->
+
+
+        <div class='input-group justify-content-center mt-3'>
+          <input class="form-control submit" type="submit" name='submit' value="Submit">
+        </div>
+    </form>
+  </body>
+
+</html>
